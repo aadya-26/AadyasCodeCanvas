@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.pinimg.com/originals/cc/4e/2b/cc4e2bee5d0b4f342d5f243ed6c84c6f.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: url('https://i.pinimg.com/originals/cc/4e/2b/cc4e2bee5d0b4f342d5f243ed6c84c6f.gif') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ecf0f1; /* Lighter text color for the header */
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    color: rgba(236, 240, 241, 0.8); /* Lightened color for better contrast */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #09342b;
+    padding: 1.5rem 0;
+}
+
+nav a {
+    color: #eff1ec; 
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: hsl(166, 39%, 30%); /* Use the same light color for the underline */
+    bottom: -6px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover {
+    color: hsl(166, 39%, 30%);
+    transform: scale(1.05);
+}
+
+nav a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Section */
+section {
+    background-color: #5b8b81;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #ffffff; /* Darker shade of primary color */
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+/* Remove underline and change color for links in section headings */
+section h2 a {
+    text-decoration: none; /* Removes the underline */
+    color: #ffffff; /* Set to the same dark color as the section heading text */
+}
+
+section h2 a:hover {
+    color: #ffffff; /* You can also define a hover color here if you want */
+}
+
+section p {
+    font-size: 1rem;
+    color: #dfdfdf;
+    line-height: 1.5;
+}
+
+#resume-file a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #9bc6bd;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#resume-file a:hover {
+    background-color: #09342b;
+}
+.profile-pic {
+    max-width: 200px; /* Adjust size */
+    border-radius: 50%; /* Makes the image circular */
+    margin: 1rem 0; /* Adds space around the image */
+    display: block;
+    border: 3px solid #09342b; /* Optional: Add a border */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #09342b; /* Matching footer with nav */
+    color: #ecf0f1; /* Lighter color for text */
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 1rem 0;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
